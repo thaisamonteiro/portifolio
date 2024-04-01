@@ -1,0 +1,891 @@
+/* Reset de estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Estilo do corpo da página */
+body{
+    background-color: rgb(8, 8, 8);
+}
+
+/* Layout com Grid */
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    flex-direction: column;
+}
+
+/* Estilo do cabeçalho */
+#header{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    background-color:#2aa9cc;
+    align-items: center;
+    height: 90px;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid rgba(0, 0, 0, 0.405);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.467);
+}
+.foto{
+    margin-left: 3%;
+}
+.foto img{
+    width: 40%;
+}
+
+/* Estilo do menu de navegação */
+#nav{
+    grid-column-start: 7;
+    grid-column-end: 12;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color:#2AAACC;
+    
+}
+
+/* Estilo das listas de navegação */
+.lista{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilo dos itens da lista de navegação */
+.lista li{
+    margin: 15px;
+    list-style-type: none;
+}
+
+/* Estilo dos links da lista de navegação */
+.lista li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: rgba(240, 237, 242, 0);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* Efeito hover nos links da lista de navegação */
+.lista li a:hover{
+    text-decoration: none;
+    color:#051c23;
+    background-color:#e8ebecd8;
+}
+
+/* Estilo das seções da página */
+/* Estilos específicos para cada seção */
+/* #section-menuPrincipal,
+   #sobre-mim,
+   #portifolio,
+   #formacao,
+   #contato */
+
+
+#section-menuPrincipal{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    display: flex;
+    height: 86vh;
+    /* background-color: #ffffff19; */
+    background-color: #00000019;
+    margin-top: 90px;
+}
+.conteudo-menuPrincipal{
+    width: 50%;
+    /* background-color: darkorange; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.conteudo-menuPrincipal h1{
+    width: 80%; 
+    font-size: 2rem;
+    padding: 20px 0px 0px 0px;
+    float: left;
+    font-weight: 700;
+    color:#ffffff;
+}
+.conteudo-menuPrincipal h2{
+    width: 80%; 
+    font-size: 20px;
+    padding: 10px 30px 20px 20px;
+    color:#2AAACC;
+    text-align: right;
+    font-weight: 600;
+}
+.conteudo-menuPrincipal p{
+    width: 80%;
+    text-align: left;
+    color:#ffffff;
+    word-spacing: 5px;
+    line-height: 30px;
+    margin-top: 30px;
+    text-indent: 20px;
+}
+.foto-menuPrincipal{
+    width: 50%;
+    /* background-color: rgb(0, 255, 191); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto-menuPrincipal img{
+    width: 50%;
+}
+
+/* seção de informações */
+#sobre-mim{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    /* background-color: rgb(4, 0, 255); */
+    display: flex;
+    height: 116vh;
+    background-color: #ffffff;
+}
+#sobre-mim div{
+    width: 50%;
+}
+#sobre-mim .foto-section {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff;
+}
+.foto-section img{
+    width: 50%;
+    /* border-radius: 50%; */
+    padding: 5px;
+}
+#sobre-mim .conteudo-section{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+   
+}
+.conteudo-section h1{
+    margin-top: 30px ;
+    font-size: 30px;
+    color:#2aa9cc;
+}
+.conteudo-section p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+    color:#1a5f73;
+}
+
+/* seção do portifolio */
+#portifolio{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    background-color: #ffffff;
+    display: flex;
+    height: 166vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top:100px;
+}
+#portifolio .titulo{
+    margin: 50px;
+    font-size: 30px;
+    color: #000000;
+    border-bottom: 2px solid #2AAACC;
+}
+.portifolio-linha{
+    /* background-color: forestgreen; */
+    width: 90%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+.portifolio-item{
+    background-color: #ffffff;
+    width: 48%;
+    height: 208px;
+    display: flex;
+    justify-content: space-between;
+    border:4px solid #2AAACC;
+    border-radius: 5px;
+}
+.portifolio-item:hover{
+    border:4px solid #00c3f8;
+    border-radius: 5px;
+    background-color: #e6e5e5;
+}
+.portifolio-foto1{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/Captura\ de\ tela\ 2024-03-31\ 202200.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portifolio-foto2{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/clone-google.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portifolio-foto3{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/google-pesquisa.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portifolio-foto4{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/projeto-starbucks.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portifolio-foto5{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/social_projeto.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.portifolio-foto6{
+    width: 50%;
+    height: 200px;
+    background-image: url('imagem/projeto-pizzaria.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.portifolio-foto-cor{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c1c1c19b;
+    transition: all 0.5s;
+}
+.portifolio-foto-cor a{
+    text-decoration: none;
+    color:#0a94ba;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+}
+.portifolio-foto-cor:hover {
+    background-color: #c1c1c100;
+    cursor: pointer;
+    transition: all 0,5s;
+}
+.portifolio-foto-cor:hover a{
+    color:#00000000;
+    border-bottom: 2px solid #00000000;
+
+}
+
+.portifolio-desc{
+    width: 50%;
+    height: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.portifolio-desc a{
+    text-decoration:none ;
+    color:#000000;
+}
+.portifolio-desc h1{
+    color:#000000;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.portifolio-desc p{
+    font-size: 14px;
+    margin-top: 20px;  
+    line-height: 18px;  
+}
+.portifolio-desc p span{
+    color:#2AAACC;
+    font-weight: 500;
+}
+
+
+/* seção da formação */
+#formacao{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    /* background-color: #ffffff19; */
+    background-color: #00000019;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formacao{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#formacao h1{
+    margin: 50px;
+    font-size: 30px;
+    color: white;
+    border-bottom: 2px solid #2AAACC;
+}
+.formacao div{
+    border: 2px solid #2AAACC;
+    padding: 50px;
+    border-radius: 10px;
+    color:#2AAACC;
+}
+.formacao div li{
+    color:#ffffff;
+    line-height: 30px;
+} 
+.formacao_div1 h2,
+.formacao_div2 h2{
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* seção da do contato e do formulário */
+#contato{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    /* background-color: #ffffff19; */
+    background-color: #2AAACC;
+    height: 116vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contato .form,
+#contato .desenho{
+    width: 45%;
+    height: 70%;
+}
+#contato .form{
+    padding-left:80px;
+    background-color: white;
+    box-shadow: 2px 2px 10px #1a5f73;
+}
+#contato .desenho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contato .desenho img{
+    width: 80%;
+}
+.bloco{
+    display: flex;
+    height: 30px;
+    align-items: end;
+}
+.bloco img{    
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.bloco input{
+    /* background-color: rgb(226, 43, 223); */
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    border-bottom: 1px solid #2AAACC;
+}
+#form p{
+    font-size:17px;
+    margin-top:30px;
+    margin-bottom:5px;
+    color:#2AAACC;
+}
+.form h1{
+    font-size:30px;
+    color:#2AAACC;
+    margin-top: 80px;
+}
+#buttom{
+    background-color:  #2AAACC;
+    color: #ffffff;
+    border: none;
+    padding:15px 30px 15px 30px;
+    border-radius: 40px;
+    width: 40%;
+    margin-top: 45px;
+    cursor: pointer;
+    border: 2px solid #2AAACC;
+    transition: all 0.5s;
+
+}
+#buttom:hover{
+    border: 2px solid #2AAACC;
+    background-color: white;
+    color: #2AAACC;
+    transition: all 0.5s;
+    font-weight: bolder;
+}
+
+/* seção footer */
+#footer{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    background-color: #0b2c36;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* seção do menu resposivo */
+aside {
+    position:fixed; /*fixa a tela */
+    top:0;
+    right:0;
+    /* z-index:900; */
+    display:flex;
+}
+#menu-opener {
+    width:40px;
+    height:40px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-right:10px;
+}
+#menu {
+    display: none;
+    width:0px;
+    height:100vh;
+    background:#ffffff;
+    overflow-x:hidden;
+    overflow-y:auto;
+    transition:.5s;
+}
+#menu ul, #menu li {
+    padding:0;
+    list-style:none;
+}
+#menu li a{
+    width: 100%;
+    text-decoration: none;
+    display:flex;
+    padding:10px;
+    color:#000000;
+    cursor:pointer;
+    font-weight: 700;
+    margin:5px;
+    border-bottom: 3px solid #2aa9cc00;
+    background-color: #ebeff0;
+    transition: all 0.3s;
+}
+#menu li a:hover {
+    border-bottom: 3px solid #2aa9cc;
+    transition: all 0.3s;
+}
+.menu-opened{
+    width:200px !important;
+}
+#barra-menu{
+    display: none;
+    margin-top:25px;
+    margin-right:10px;
+}
+.traço{
+    width:30px;
+    height: 4px;
+    margin: 5px;
+    background-color:#ffffff;
+}
+
+/* Estilo responsivo para telas pequenas (até 767px) */
+@media only screen and (min-width:200px) and (max-width:767px) {
+    #menu {
+        display: block;
+    }
+    #barra-menu{
+        display: block;
+    }
+    #nav{
+        display: none;
+    }
+    
+    /* header ---------------------------------------*/
+
+    #header{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        justify-content: space-between;
+    }
+
+    /* menu principal-------------------------------*/
+
+    #section-menuPrincipal{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        display: flex;
+        height: 120vh;
+        flex-direction: column-reverse;
+        margin-top: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .foto-menuPrincipal{
+        width: 100%;
+    }
+    .foto-menuPrincipal img{
+        width: 30%;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .conteudo-menuPrincipal{
+        width: 100%;
+    }
+    .foto-menuPrincipal{
+        width: 100%;
+    }
+    .conteudo-menuPrincipal h1{
+        font-size: 1.5rem;
+        padding-left:30px;
+        width: 100%; 
+        text-align: center;
+    }
+    .conteudo-menuPrincipal h2{
+        width: 100%; 
+        text-align: center;
+    }
+    .conteudo-menuPrincipal p{
+        width: 100%;
+        text-align: center;
+        padding: 0px 10px 10px 10px;
+    }
+
+    /* sobre mim-------------------------------*/
+
+    #sobre-mim{  
+        grid-column-start: 1;
+        grid-column-end: 13;     
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+    #sobre-mim div{
+        width: 100%;
+    }
+    #sobre-mim .conteudo-section{
+        width: 100%;
+        padding: 20px;
+       
+    }
+    #sobre-mim .foto-section{
+        width: 100%;
+        padding: 20px; 
+        margin-top: 40px;      
+    }
+    #sobre-mim .foto-section img{
+        width: 50%;       
+    }
+
+    /* formação-------------------------------*/
+
+    #formacao{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        height: auto;
+        padding-top: 30px;
+        margin-top: 50px;
+    }
+    .formacao{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+    .formacao div{
+        padding: 40px; 
+        margin:30px;       
+    }
+
+    /* portifolio-------------------------------*/
+
+    #portifolio{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        margin-top:50px;
+        height: auto;
+        padding-bottom:50px;
+    }
+    .portifolio-item{
+        width: 90%;
+        display: flex;
+        height: auto;
+        margin:10px;
+    }
+    .portifolio-linha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .portifolio-desc{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .portifolio-desc h1{
+        font-size: 14px;
+    }
+    .portifolio-desc p{
+        font-size: 10px;
+        margin-top: 5px;  
+        line-height: 15px;  
+    }
+    .portifolio-desc p span{
+        color:#2AAACC;
+        font-weight: 400;
+    }
+
+    /* contato-------------------------------*/
+
+    #contato{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        display: flex;
+        flex-direction: column;
+        height: 92vh;
+    }
+    #contato .desenho{
+        display: none;
+    }
+    #contato .form{
+        padding-left:10px;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 90%;
+    } 
+    #form {
+        
+        width: 90%;
+    }  
+    #form #nome{
+        width: 80%;
+    }  
+}
+
+/* Estilo responsivo para telas médias (768px a 1024px) */
+@media only screen and (min-width:768px) and (max-width:1024px){
+    #menu {
+        display: block;
+    }
+    #barra-menu{
+        display: block;
+    }
+    #nav{
+        display: none;
+    }
+    
+    /* header ---------------------------------------*/
+
+    #header{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        justify-content: space-between;
+    }
+
+    /* menu principal-------------------------------*/
+
+    #section-menuPrincipal{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        display: flex;
+        height: 155vh;
+        flex-direction: column-reverse;
+        margin-top: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .foto-menuPrincipal{
+        width: 100%;
+    }
+    .foto-menuPrincipal img{
+        width: 30%;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .conteudo-menuPrincipal{
+        width: 100%;
+    }
+    .foto-menuPrincipal{
+        width: 100%;
+    }
+    .conteudo-menuPrincipal h1{
+        text-align: center;
+        padding-left:30px;
+        width: 100%; 
+    }
+    .conteudo-menuPrincipal h2{
+        text-align: center;
+        width: 100%; 
+    }
+    .conteudo-menuPrincipal p{
+        width: 100%;
+        text-align: center;
+        padding: 0px 10px 10px 10px;
+    }
+
+    /* sobre mim-------------------------------*/
+
+    #sobre-mim{  
+        grid-column-start: 1;
+        grid-column-end: 13;     
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sobre-mim div{
+        width: 100%;
+    }
+    #sobre-mim .conteudo-section{
+        width: 80%;
+        padding: 20px;
+       
+    }
+    #sobre-mim .foto-section{
+        width: 100%;
+        padding: 20px; 
+        margin-top: 40px;      
+    }
+    #sobre-mim .foto-section img{
+        width: 30%;       
+    }
+
+    /* formação-------------------------------*/
+
+    #formacao{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        height: auto;
+        padding-top: 30px;
+        margin-top: 50px;
+    }
+    .formacao{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+    .formacao div{
+        padding: 40px; 
+        margin:30px;       
+    }
+
+    /* portifolio-------------------------------*/
+
+    #portifolio{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        margin-top:50px;
+        height: auto;
+        padding-bottom:50px;
+    }
+    .portifolio-item{
+        width: 78%;
+        display: flex;
+        height: auto;
+        margin:10px;
+    }
+    .portifolio-linha{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .portifolio-desc{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .portifolio-desc h1{
+        font-size: 14px;
+    }
+    .portifolio-desc p{
+        font-size: 10px;
+        margin-top: 5px;  
+        line-height: 15px;  
+    }
+    .portifolio-desc p span{
+        color:#2AAACC;
+        font-weight: 400;
+    }
+
+    /* contato-------------------------------*/
+
+    #contato{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+    }
+    #contato .desenho{
+        display: none;
+    }
+    #contato .form{
+        padding-left:10px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+        height: 75%;
+    }  
+    #contato .form h1{
+        margin-top: 30px;
+    } 
+    #buttom{
+        margin-top: 40px;
+    }  
+}
